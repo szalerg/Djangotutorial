@@ -1,0 +1,14 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+<a href="{{ url_for('views.add_event') }}">Dodaj wydarzenie</a>
+<ul>
+    {% for event in events %}
+        <li>
+            {{ event.name }} – {{ event.date }} – {{ event.seats }} miejsc
+            [<a href="{{ url_for('views.edit_event', event_id=event.id) }}">Edytuj</a>]
+            [<a href="{{ url_for('views.delete_event', event_id=event.id) }}">Usuń</a>]
+        </li>
+    {% endfor %}
+</ul>
+{% endblock %}

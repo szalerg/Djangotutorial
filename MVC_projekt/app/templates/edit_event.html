@@ -1,0 +1,11 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+<h2>Edytuj wydarzenie</h2>
+<form method="post">
+    Nazwa: <input type="text" name="name" value="{{ event.name }}"><br>
+    Data: <input type="date" name="date" value="{{ event.date }}"><br>
+    Liczba miejsc: <input type="number" name="seats" value="{{ event.seats }}"><br>
+    <input type="submit" value="Zapisz zmiany">
+</form>
+{% endblock %}

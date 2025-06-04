@@ -1,0 +1,11 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+<h2>Dodaj wydarzenie</h2>
+<form method="post">
+    Nazwa: <input type="text" name="name"><br>
+    Data: <input type="date" name="date"><br>
+    Liczba miejsc: <input type="number" name="seats"><br>
+    <input type="submit" value="Dodaj">
+</form>
+{% endblock %}
